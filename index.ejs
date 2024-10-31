@@ -4,40 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competencia de Disfraces</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<center>
-<body>
-    <h1>Competencia de Disfraces</h1>
+<body class="bg-gray-900 text-orange-300 min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/001/331/268/non_2x/happy-halloween-from-the-spooky-castle-free-vector.jpg');">
 
-    <!-- Formulario para agregar o actualizar un participante -->
-    <form id="form-cargar">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="disfraz">Disfraz:</label>
-        <input type="text" id="disfraz" name="disfraz" required>
-        
-        <button type="submit" id="boton-submit">Cargar</button>
-    </form>
+    <div class="container mx-auto p-8 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg max-w-2xl">
+        <h1 class="text-4xl font-bold text-center text-orange-500 mb-6">🎃 Competencia de Disfraces 🎃</h1>
 
-    <!-- Tabla de participantes -->
-    <table border="1" id="tabla-participantes">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Disfraz</th>
-                <th>Votos</th>
-                <th>Votar</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- datos cargados en la tabla -->
-        </tbody>
-    </table>
+        <!-- Formulario para agregar o actualizar un participante -->
+        <form id="form-cargar" class="bg-gray-700 p-6 rounded-lg shadow-md mb-6">
+            <div class="flex flex-col mb-4">
+                <label for="nombre" class="font-semibold text-orange-400 mb-2">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="px-4 py-2 rounded border border-gray-600 focus:outline-none focus:border-orange-500">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label for="disfraz" class="font-semibold text-orange-400 mb-2">Disfraz:</label>
+                <input type="text" id="disfraz" name="disfraz" required
+                    class="px-4 py-2 rounded border border-gray-600 focus:outline-none focus:border-orange-500">
+            </div>
+            <button type="submit" id="boton-submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-lg">
+                Cargar
+            </button>
+        </form>
+
+        <!-- Tabla de participantes -->
+        <div class="overflow-x-auto">
+            <table border="1" id="tabla-participantes" class="w-full bg-gray-700 border border-gray-600 text-center rounded-lg overflow-hidden shadow-md">
+                <thead>
+                    <tr class="bg-orange-600 text-white">
+                        <th class="py-3 px-4">Nombre</th>
+                        <th class="py-3 px-4">Disfraz</th>
+                        <th class="py-3 px-4">Votos</th>
+                        <th class="py-3 px-4">Votar</th>
+                        <th class="py-3 px-4">Editar</th>
+                        <th class="py-3 px-4">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- datos cargados en la tabla -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
-</center>
 </html>
