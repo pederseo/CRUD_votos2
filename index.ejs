@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competencia de Disfraces</title>
+</head>
+<center>
+<body>
+    <h1>Competencia de Disfraces</h1>
+
+    <!-- Formulario para agregar o actualizar un participante -->
+    <form id="form-cargar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="disfraz">Disfraz:</label>
+        <input type="text" id="disfraz" name="disfraz" required>
+        
+        <button type="submit" id="boton-submit">Cargar</button>
+    </form>
+
+    <!-- Tabla de participantes -->
+    <table border="1" id="tabla-participantes">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Disfraz</th>
+                <th>Votos</th>
+                <th>Votar</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- datos cargados en la tabla -->
+        </tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</center>
+</html>
